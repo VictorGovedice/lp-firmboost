@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Congratulations! Your Gift</title>
+  <link rel="stylesheet" href="./css/style.css" />
+</head>
+<body>
+
+  <div class="container">
+    <div class="progress-bar">
+      <div class="progress-bar-fill"></div>
+    </div>
+    <div class="progress-text">75% COMPLETE</div>
+
+    <p class="step">STEP 3 OF 4</p>
+    <h1>Congratulations!</h1>
+    <p>You are our customer <strong>115.00</strong> and because of that <span class="highlight">we are gifting you 🎁</span></p>
+    <p class="instruction">WATCH THE VIDEO BELOW AND UNLOCK YOUR GIFT!</p>
+
+    <div class="video">
+      <img src="./assets/video-exemp.jpg" alt="Example Video">
+    </div>
+
+    <p>This gift is available for a limited time, don't miss the chance</p>
+    <a href="#" class="cta-button">I WANT TO UNLOCK MY GIFT</a>
+
+    <div class="product-section">
+      <p class="best-price">BEST PRICE</p>
+      <h2 class="six-text">6 bottles</h2>
+      <div class="product-image-wrapper">
+        <img src="./assets/product.png" alt="FirmBoost Product">
+      </div>
+      <div class="price">
+        <del>FROM $534</del><br>
+        <strong>FOR $207</strong><br>
+        <span>$34.59 PER BOTTLE</span>
+      </div>
+      <a href="#" class="cta-button">I WANT TO UNLOCK MY GIFT</a>
+      <p class="disclaimer">I understand that this is my <strong>only opportunity to access this gift</strong> and I am okay with missing it. I will let this chance pass forever.</p>
+    </div>
+
+    <div class="guarantee">
+      <img src="./assets/security.png" alt="Guarantee">
+      <div class="guarantee-text">
+        <strong>60-DAY MONEY-BACK GUARANTEE 100% SATISFACTION GUARANTEED</strong>
+        <p>Mounja Burn comes with a 100% money-back guarantee - 60 full days from your original purchase. If you are not completely satisfied with our product or your results within the first 60 days, just contact us and return even the empty bottles for a full refund.</p>
+      </div>
+    </div>
+
+    <footer>FirmBoost</footer>
+  </div>
+
+  <!-- Confetti Script -->
+  <canvas id="confetti-canvas" style="position:fixed; top:0; left:0; width:100%; height:100%; pointer-events:none; z-index:999;"></canvas>
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+  <script>
+    window.onload = function() {
+      // Confetti after 4 seconds (same as progress bar animation)
+      setTimeout(() => {
+        const confettiCanvas = document.getElementById('confetti-canvas');
+        const myConfetti = confetti.create(confettiCanvas, { resize: true, useWorker: true });
+
+        myConfetti({
+          particleCount: 200,
+          spread: 90,
+          origin: { y: 0.6 }
+        });
+
+      }, 4000);
+    };
+  </script>
+
+</body>
+</html>
