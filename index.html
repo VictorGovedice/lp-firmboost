@@ -10,21 +10,33 @@
 
   <div class="container">
     <div class="progress-bar">
-      <div class="progress-bar-fill"></div>
+      <div class="progress-bar-fill">
+        <div class="progress-text">75% COMPLETE</div>
+      </div>
     </div>
-    <div class="progress-text">75% COMPLETE</div>
 
     <p class="step">STEP 3 OF 4</p>
     <h1>Congratulations!</h1>
     <p>You are our customer <strong>115.00</strong> and because of that <span class="highlight">we are gifting you 🎁</span></p>
-    <p class="instruction">WATCH THE VIDEO BELOW AND UNLOCK YOUR GIFT!</p>
+    <p class="instruction" style="margin-bottom: 2rem;">WATCH THE VIDEO BELOW AND UNLOCK YOUR GIFT!</p>
 
     <div class="video">
-      <img src="./assets/video-exemp.jpg" alt="Example Video">
+      <div id="vid_673b48f6a7c3ac000b007cad" style="position: relative; width: 100%; padding: 56.25% 0 0;">
+        <img id="thumb_673b48f6a7c3ac000b007cad" src="https://images.converteai.net/e2c33673-3db6-47ad-bf8e-2b783d6ab54c/players/673b48f6a7c3ac000b007cad/thumbnail.jpg" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; display: block;" alt="thumbnail">
+        <div id="backdrop_673b48f6a7c3ac000b007cad" style="-webkit-backdrop-filter: blur(5px); backdrop-filter: blur(5px); position: absolute; top: 0; height: 100%; width: 100%;"></div>
+      </div>
+      <script type="text/javascript" id="scr_673b48f6a7c3ac000b007cad">
+        var s = document.createElement("script");
+        s.src = "https://scripts.converteai.net/e2c33673-3db6-47ad-bf8e-2b783d6ab54c/players/673b48f6a7c3ac000b007cad/player.js";
+        s.async = true;
+        document.head.appendChild(s);
+      </script>
     </div>
 
-    <p>This gift is available for a limited time, don't miss the chance</p>
-    <a href="#" class="cta-button">I WANT TO UNLOCK MY GIFT</a>
+    <p style="margin-top: 2rem;">This gift is available for a limited time, don't miss the chance</p>
+    <a href="https://monja-burn.mycartpanda.com/ex-ocu/next-offer/8rj74gw26N?accepted=yes" class="cta-button">I WANT TO UNLOCK MY GIFT</a>
+
+    <div class="div-to-show-after">
 
     <div class="product-section">
       <p class="best-price">BEST PRICE</p>
@@ -40,8 +52,10 @@
         <span>$34.59 PER BOTTLE</span>
       </div>
       
-      <a href="#" class="cta-button">I WANT TO UNLOCK MY GIFT</a>
-      <p class="disclaimer">I understand that this is my <strong>only opportunity to access this gift</strong> and I am okay with missing it. I will let this chance pass forever.</p>
+      <a href="https://monja-burn.mycartpanda.com/ex-ocu/next-offer/8rj74gw26N?accepted=yes" class="cta-button">I WANT TO UNLOCK MY GIFT</a>
+      <a href="https://monja-burn.mycartpanda.com/ex-ocu/next-offer/8rj74gw26N?accepted=no">
+        <p class="disclaimer">I understand that this is my <strong>only opportunity to access this gift</strong> and I am okay with missing it. I will let this chance pass forever.</p>
+      </a>
     </div>
 
     <div class="guarantee">
@@ -55,13 +69,14 @@
     <footer>FirmBoost</footer>
   </div>
 
+</div>
+
   <!-- Confetti Script -->
   <canvas id="confetti-canvas" style="position:fixed; top:0; left:0; width:100%; height:100%; pointer-events:none; z-index:999;"></canvas>
   <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
 
   <script>
     window.onload = function() {
-      // Confetti after 4 seconds (same as progress bar animation)
       setTimeout(() => {
         const confettiCanvas = document.getElementById('confetti-canvas');
         const myConfetti = confetti.create(confettiCanvas, { resize: true, useWorker: true });
@@ -71,9 +86,15 @@
           spread: 90,
           origin: { y: 0.6 }
         });
-
-      }, 4000);
+      }, 1000);
     };
+
+
+    window.addEventListener('load', function () {
+    setTimeout(function () {
+      document.querySelector('.div-to-show-after').style.display = 'block';
+    }, 7500);
+  });
   </script>
 
 </body>
