@@ -87,10 +87,16 @@
     };
 
 
-    window.addEventListener('load', function () {
+  // Defina aqui o tempo em SEGUNDOS
+  const tempoEmSegundos = 20; // Definir aqui o tempo em segundos
+
+  // Transforma para milissegundos
+  const tempoEmMilissegundos = tempoEmSegundos * 1000;
+
+  window.addEventListener('load', function () {
     setTimeout(function () {
       document.querySelector('.div-to-show-after').style.display = 'block';
-    }, 20000);  // ESSA É A PARTE PARA TROCAR O TEMPO DO VIDEO TRANSFORMAR DE MINUTOS PARA MILISEGUNDOS
+    }, tempoEmMilissegundos);
   });
   </script>
 
