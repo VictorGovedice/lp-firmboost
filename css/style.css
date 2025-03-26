@@ -95,10 +95,10 @@ h1 {
   font-size: 14px;
   font-weight: bold;
 }
-.video img {
+.video {
   max-width: 100%;
   border-radius: 10px;
-  border: 2px solid #b043b4;
+  border: 8px solid #b043b4;
   margin: 20px 0;
 }
 .cta-button {
